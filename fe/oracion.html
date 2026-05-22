@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Oración — Busca Cristo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar solid" id="navbar">
+    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../actividades.html">Actividades</a></li>
+        <li><a href="../fe.html">Fe</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+        <li><select class="lang-select" aria-label="Idioma"><option value="es" selected>Español</option><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="ca">Català</option><option value="zh">中文</option></select></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+    <img src="https://www.churchofjesuschrist.org/imgs/6b138efbce50c6a8289a49ec2de852655be8521d/full/,1400/0/default" alt="La Oración" class="page-hero-img">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb">
+            <a href="../index.html">Inicio</a><span>/</span>
+            <a href="../fe.html">Temas de Fe</a><span>/</span>
+            <span style="color:var(--white)">La Oración</span>
+        </div>
+        <h1>La Oración</h1>
+        <p>Habla con Dios. Él te escucha y quiere responder tus preguntas.</p>
+    </div>
+</div>
+
+<section>
+    <div class="content-section reveal">
+        <h2>¿Qué es la oración?</h2>
+        <p>La oración es la forma en que nos comunicamos con Dios, nuestro Padre Celestial. No es un ritual complicado ni requiere palabras especiales — es simplemente hablar con Él como hablarías con un padre amoroso que te conoce y se preocupa por ti.</p>
+        <p>Dios quiere saber de ti. Quiere escuchar tus alegrías, tus preocupaciones, tus preguntas y tus agradecimientos. Y lo más importante: Él responde.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/6b138efbce50c6a8289a49ec2de852655be8521d/full/,900/0/default" alt="Momento de reflexión" class="content-img">
+
+        <h3>¿Cómo orar?</h3>
+        <p>No existe una forma incorrecta de orar si lo haces con sinceridad. Sin embargo, Jesucristo nos enseñó un modelo sencillo:</p>
+        <ul>
+            <li><strong>Dirigirte a Dios:</strong> Comienza diciendo «Padre Celestial» o «Querido Dios»</li>
+            <li><strong>Agradecer:</strong> Expresa gratitud por las bendiciones que has recibido</li>
+            <li><strong>Pedir:</strong> Comparte tus necesidades, preguntas y deseos con Él</li>
+            <li><strong>Cerrar:</strong> Termina «en el nombre de Jesucristo, amén»</li>
+        </ul>
+
+        <h3>¿Dios realmente responde?</h3>
+        <p>Sí. Dios responde las oraciones, aunque no siempre de la forma que esperamos. A veces la respuesta llega como un sentimiento de paz, una idea clara, las palabras de otra persona o una puerta que se abre (o se cierra) en tu vida.</p>
+        <p>Aprender a reconocer las respuestas de Dios es parte del camino de la fe. Te invitamos a probarlo — ora con sinceridad y observa lo que sucede en tu corazón.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/a95f9e4c5d3e6e713a3b7875c9130207b030c3aa/full/,900/0/default" alt="Paz y naturaleza" class="content-img">
+
+        <h3>La oración cambia vidas</h3>
+        <p>Millones de personas en todo el mundo han experimentado el poder de la oración. No es magia — es una relación real con un Dios real que te ama. La oración te da fuerza, dirección y paz en medio de las tormentas de la vida.</p>
+
+        <div class="content-cta">
+            <h3>Aprende a orar</h3>
+            <p>Si nunca has orado o si quieres profundizar tu relación con Dios, estamos aquí para ayudarte.</p>
+            <a href="../index.html#contacto" class="btn btn-primary">Contáctanos</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div><div class="footer-brand">Busca Cristo</div><p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p></div>
+        <div class="footer-links"><h4>Enlaces</h4><a href="../actividades.html">Actividades</a><a href="../fe.html">Temas de Fe</a><a href="../index.html#nosotros">Nosotros</a><a href="../index.html#contacto">Contacto</a></div>
+        <div class="footer-links"><h4>Recursos</h4><a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a><a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a><a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

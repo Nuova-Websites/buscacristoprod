@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ven y Ve — Busca Cristo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar solid" id="navbar">
+    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../actividades.html">Actividades</a></li>
+        <li><a href="../fe.html">Fe</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+        <li>
+            <select class="lang-select" aria-label="Idioma">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="pt">Português</option>
+                <option value="ca">Català</option>
+                <option value="zh">中文</option>
+            </select>
+        </li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+    <img src="https://www.churchofjesuschrist.org/imgs/5ab2560ad1f736f7dbb26ed224e48d1dd44729be/full/,1400/0/default" alt="Ven y Ve" class="page-hero-img">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb">
+            <a href="../index.html">Inicio</a><span>/</span>
+            <a href="../actividades.html">Actividades</a><span>/</span>
+            <span style="color:var(--white)">Ven y Ve</span>
+        </div>
+        <h1>Ven y Ve</h1>
+        <p>Visita una de nuestras congregaciones y descubre una comunidad que se preocupa por ti.</p>
+    </div>
+</div>
+
+<section>
+    <div class="content-section reveal">
+        <h2>Una invitación abierta</h2>
+        <p>Jesucristo invitó a Sus discípulos a «venir y ver». Esa misma invitación es para ti. No importa tu origen, tu historia o tus creencias actuales — eres bienvenido en nuestras reuniones.</p>
+        <p>Cada domingo, cientos de personas en Barcelona se reúnen para adorar a Dios, aprender de las Escrituras y apoyarse mutuamente. Te invitamos a ser parte de ello.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/5ab2560ad1f736f7dbb26ed224e48d1dd44729be/full/,900/0/default" alt="Congregación reunida" class="content-img">
+
+        <h3>¿Qué puedo esperar en una reunión?</h3>
+        <ul>
+            <li>Una reunión sacramental con himnos, oraciones y discursos sobre Jesucristo (aproximadamente 1 hora)</li>
+            <li>Clases de Escuela Dominical donde se estudian las Escrituras en grupo</li>
+            <li>Un ambiente de respeto, amor y aceptación — ven como eres</li>
+            <li>Personas amigables que estarán felices de recibirte y ayudarte</li>
+        </ul>
+
+        <h3>Ubicaciones en Barcelona</h3>
+        <p>Tenemos varias capillas en el área metropolitana de Barcelona. Nuestros misioneros pueden ayudarte a encontrar la más cercana a tu ubicación y acompañarte si lo deseas.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/c68db1aad1273d4efd0a105fdd11d0b5ceba670b/full/,900/0/default" alt="Barcelona" class="content-img">
+
+        <h3>¿Necesitas que alguien te acompañe?</h3>
+        <p>Entendemos que visitar un lugar nuevo puede ser intimidante. Nuestros misioneros o miembros locales pueden acompañarte, presentarte a la congregación y responder cualquier pregunta que tengas.</p>
+
+        <div class="content-cta">
+            <h3>Encuentra tu capilla</h3>
+            <p>Escríbenos y te ayudaremos a encontrar la capilla más cercana y el horario de reuniones.</p>
+            <a href="../index.html#contacto" class="btn btn-primary">Quiero visitar</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div>
+            <div class="footer-brand">Busca Cristo</div>
+            <p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Enlaces</h4>
+            <a href="../actividades.html">Actividades</a>
+            <a href="../fe.html">Temas de Fe</a>
+            <a href="../index.html#nosotros">Nosotros</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </div>
+        <div class="footer-links">
+            <h4>Recursos</h4>
+            <a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a>
+            <a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a>
+            <a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

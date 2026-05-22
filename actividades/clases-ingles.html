@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de Inglés y Español — Busca Cristo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar solid" id="navbar">
+    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../actividades.html">Actividades</a></li>
+        <li><a href="../fe.html">Fe</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+        <li><select class="lang-select" aria-label="Idioma"><option value="es" selected>Español</option><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="ca">Català</option><option value="zh">中文</option></select></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+    <img src="https://www.churchofjesuschrist.org/imgs/941a08cd15da5eff2ddcd432c37348936d1ddec5/full/,1400/0/default" alt="Clases de Idiomas" class="page-hero-img">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb">
+            <a href="../index.html">Inicio</a><span>/</span>
+            <a href="../actividades.html">Actividades</a><span>/</span>
+            <span style="color:var(--white)">Clases de Inglés y Español</span>
+        </div>
+        <h1>Clases de Inglés y Español</h1>
+        <p>Aprende un nuevo idioma gratis con nuestros misioneros. Clases prácticas, divertidas y para todos los niveles.</p>
+    </div>
+</div>
+
+<section>
+    <div class="content-section reveal">
+        <h2>Dos idiomas, un mismo propósito</h2>
+        <p>Ofrecemos clases gratuitas de inglés y de español. Nuestros misioneros, provenientes de distintos países y culturas, están felices de compartir su idioma y ayudarte a crecer.</p>
+        <p>Tanto si quieres aprender inglés para mejorar laboralmente, o español para integrarte mejor en Barcelona — estamos aquí para ayudarte. Las clases son prácticas, interactivas y sin presión.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/941a08cd15da5eff2ddcd432c37348936d1ddec5/full/,900/0/default" alt="Clase de idiomas" class="content-img">
+
+        <h3>Clases de Inglés</h3>
+        <ul>
+            <li>Conversación práctica con misioneros hablantes nativos de inglés</li>
+            <li>Desde nivel principiante hasta avanzado</li>
+            <li>Vocabulario cotidiano, pronunciación y gramática</li>
+            <li>Ideal para mejorar en el trabajo o los estudios</li>
+        </ul>
+
+        <h3>Clases de Español</h3>
+        <ul>
+            <li>Perfecto para personas recién llegadas a España o que quieren integrarse</li>
+            <li>Español conversacional para el día a día en Barcelona</li>
+            <li>Profesores pacientes que adaptan el ritmo a tus necesidades</li>
+            <li>Un ambiente multicultural donde todos aprenden de todos</li>
+        </ul>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/c68db1aad1273d4efd0a105fdd11d0b5ceba670b/full/,900/0/default" alt="Aprendiendo juntos" class="content-img">
+
+        <h3>¿Cómo apuntarse?</h3>
+        <p>No necesitas traer nada — solo ganas de aprender. Las clases son gratuitas, en grupos pequeños o individuales, y se adaptan a tu horario. Tenemos sesiones presenciales en nuestras capillas y espacios comunitarios de Barcelona, y también en línea si lo prefieres.</p>
+        <p>Muchos de nuestros estudiantes acaban formando amistades duraderas con los misioneros y otros participantes. Más que aprender un idioma, es una experiencia de comunidad.</p>
+
+        <div class="content-cta">
+            <h3>Inscríbete gratis</h3>
+            <p>Escríbenos indicando si quieres inglés o español y te contactamos con los horarios disponibles.</p>
+            <a href="../index.html#contacto" class="btn btn-primary">Quiero apuntarme</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div><div class="footer-brand">Busca Cristo</div><p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p></div>
+        <div class="footer-links"><h4>Enlaces</h4><a href="../actividades.html">Actividades</a><a href="../fe.html">Temas de Fe</a><a href="../index.html#nosotros">Nosotros</a><a href="../index.html#contacto">Contacto</a></div>
+        <div class="footer-links"><h4>Recursos</h4><a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a><a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a><a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

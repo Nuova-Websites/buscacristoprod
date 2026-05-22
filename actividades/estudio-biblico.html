@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio de las Escrituras — Busca Cristo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar solid" id="navbar">
+    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../actividades.html">Actividades</a></li>
+        <li><a href="../fe.html">Fe</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+        <li><select class="lang-select" aria-label="Idioma"><option value="es" selected>Español</option><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="ca">Català</option><option value="zh">中文</option></select></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+    <img src="https://www.churchofjesuschrist.org/imgs/8c02b6fecaa1477148b7ee441529eee2b23e4e40/full/,1400/0/default" alt="Estudio de las Escrituras" class="page-hero-img">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb">
+            <a href="../index.html">Inicio</a><span>/</span>
+            <a href="../actividades.html">Actividades</a><span>/</span>
+            <span style="color:var(--white)">Estudio de las Escrituras</span>
+        </div>
+        <h1>Estudio de las Escrituras</h1>
+        <p>El Libro de Mormón y la Biblia: dos testamentos, un mismo Jesucristo.</p>
+    </div>
+</div>
+
+<section>
+    <div class="content-section reveal">
+        <h2>Dos libros que hablan de Cristo</h2>
+        <p>La Biblia y el Libro de Mormón no se contradicen — se complementan. Ambos contienen la palabra de Dios, las enseñanzas de Jesucristo y el testimonio de profetas que vivieron en diferentes partes del mundo. Juntos forman un testimonio más completo de Jesús como Salvador del mundo.</p>
+        <p>Te invitamos a estudiar las Escrituras con nosotros en un ambiente de respeto, amistad y aprendizaje. No importa cuánto sepas — lo importante es el deseo de aprender y acercarte a Dios.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/8c02b6fecaa1477148b7ee441529eee2b23e4e40/full/,900/0/default" alt="Escrituras abiertas" class="content-img">
+
+        <h3>¿Qué estudiaremos?</h3>
+        <ul>
+            <li>La vida y el ministerio de Jesucristo según los Evangelios y el Libro de Mormón</li>
+            <li>El Sermón del Monte — el manual para una vida feliz</li>
+            <li>Las parábolas de Jesús y sus lecciones para hoy</li>
+            <li>Los profetas del Antiguo Testamento y del continente americano</li>
+            <li>La oración, el arrepentimiento y cómo acercarte a Dios</li>
+            <li>Las promesas del Libro de Mormón: fe, esperanza y paz</li>
+        </ul>
+
+        <h3>¿Cómo funciona?</h3>
+        <ul>
+            <li>Sesiones personalizadas según tu nivel de conocimiento e intereses</li>
+            <li>Puedes estudiar en tu hogar, en una capilla o en un lugar público — tú eliges</li>
+            <li>Nuestros misioneros te guían con paciencia y sin presión</li>
+            <li>Todo completamente gratuito y sin ningún compromiso</li>
+        </ul>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/03090cc8a607cfe68bd2e11222f227004911bf18/full/,900/0/default" alt="Estudiando juntos" class="content-img">
+
+        <h3>Estudia a tu propio ritmo</h3>
+        <p>No hay prisa, no hay plazos. Puedes estudiar una vez a la semana o cuando tu horario lo permita. Lo importante es que disfrutes el proceso de aprender y crecer espiritualmente. Si quieres, también podemos regalarte un ejemplar gratuito del Libro de Mormón para que lo leas por tu cuenta.</p>
+
+        <div class="content-cta">
+            <h3>Empieza tu estudio de las Escrituras</h3>
+            <p>Contáctanos y programaremos una sesión en el momento y lugar que te convengan.</p>
+            <a href="../index.html#contacto" class="btn btn-primary">Quiero estudiar las Escrituras</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div><div class="footer-brand">Busca Cristo</div><p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p></div>
+        <div class="footer-links"><h4>Enlaces</h4><a href="../actividades.html">Actividades</a><a href="../fe.html">Temas de Fe</a><a href="../index.html#nosotros">Nosotros</a><a href="../index.html#contacto">Contacto</a></div>
+        <div class="footer-links"><h4>Recursos</h4><a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a><a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a><a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto — Busca Cristo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar solid" id="navbar">
+    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../actividades.html">Actividades</a></li>
+        <li><a href="../fe.html">Fe</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+        <li><select class="lang-select" aria-label="Idioma"><option value="es" selected>Español</option><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="ca">Català</option><option value="zh">中文</option></select></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+    <img src="https://www.churchofjesuschrist.org/imgs/03090cc8a607cfe68bd2e11222f227004911bf18/full/,1400/0/default" alt="Instituto" class="page-hero-img">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb">
+            <a href="../index.html">Inicio</a><span>/</span>
+            <a href="../actividades.html">Actividades</a><span>/</span>
+            <span style="color:var(--white)">Instituto</span>
+        </div>
+        <h1>Instituto</h1>
+        <p>Un espacio semanal para jóvenes: lección, juegos y comida. Fe, amistad y mucha diversión.</p>
+    </div>
+</div>
+
+<section>
+    <div class="content-section reveal">
+        <h2>Un encuentro para jóvenes</h2>
+        <p>El Instituto es una reunión semanal pensada especialmente para jóvenes. Empezamos con una lección breve sobre Jesucristo — sus enseñanzas, su vida y cómo aplicar sus principios hoy en día — y después compartimos juegos, comida y mucha convivencia.</p>
+        <p>No importa si eres miembro de la Iglesia o si nunca has oído hablar de ella. El Instituto es para todos. Es un espacio abierto, cálido y sin presión donde lo más importante es pasarlo bien y hacer amigos.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/03090cc8a607cfe68bd2e11222f227004911bf18/full/,900/0/default" alt="Jóvenes reunidos" class="content-img">
+
+        <h3>¿Qué pasa en el Instituto?</h3>
+        <ul>
+            <li>Una lección corta e interactiva sobre la vida y enseñanzas de Jesucristo</li>
+            <li>Tiempo de preguntas y conversación — todo el mundo puede participar</li>
+            <li>Juegos en grupo: de mesa, deportivos, creativos...</li>
+            <li>Comida compartida — a veces cada uno trae algo, otras veces está todo preparado</li>
+            <li>Un ambiente multicultural donde se hablan muchos idiomas</li>
+        </ul>
+
+        <h3>¿Para quién es?</h3>
+        <p>El Instituto está pensado para jóvenes de entre 18 y 35 años aproximadamente, aunque siempre hay excepciones. Si tienes ganas de conocer gente nueva, aprender algo interesante sobre Cristo y pasarlo bien, eres bienvenido.</p>
+        <p>Muchos de los que vienen buscan comunidad — especialmente si son nuevos en Barcelona o están en un momento de búsqueda espiritual. Aquí encontrarás un grupo que te recibe sin juzgar.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/c68db1aad1273d4efd0a105fdd11d0b5ceba670b/full/,900/0/default" alt="Comunidad joven" class="content-img">
+
+        <div class="content-cta">
+            <h3>Ven al próximo Instituto</h3>
+            <p>Escríbenos y te decimos cuándo y dónde es el próximo encuentro. Solo tienes que aparecer.</p>
+            <a href="../index.html#contacto" class="btn btn-primary">Quiero ir</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div><div class="footer-brand">Busca Cristo</div><p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p></div>
+        <div class="footer-links"><h4>Enlaces</h4><a href="../actividades.html">Actividades</a><a href="../fe.html">Temas de Fe</a><a href="../index.html#nosotros">Nosotros</a><a href="../index.html#contacto">Contacto</a></div>
+        <div class="footer-links"><h4>Recursos</h4><a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a><a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a><a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

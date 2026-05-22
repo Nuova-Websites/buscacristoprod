@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noches de Hogar — Busca Cristo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar solid" id="navbar">
+    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../actividades.html">Actividades</a></li>
+        <li><a href="../fe.html">Fe</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+        <li><select class="lang-select" aria-label="Idioma"><option value="es" selected>Español</option><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="ca">Català</option><option value="zh">中文</option></select></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+    <img src="https://www.churchofjesuschrist.org/imgs/c68db1aad1273d4efd0a105fdd11d0b5ceba670b/full/,1400/0/default" alt="Noches de Hogar" class="page-hero-img">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb">
+            <a href="../index.html">Inicio</a><span>/</span>
+            <a href="../actividades.html">Actividades</a><span>/</span>
+            <span style="color:var(--white)">Noches de Hogar</span>
+        </div>
+        <h1>Noches de Hogar</h1>
+        <p>Actividades semanales para fortalecer amistades, aprender y divertirse juntos.</p>
+    </div>
+</div>
+
+<section>
+    <div class="content-section reveal">
+        <h2>Una noche para compartir</h2>
+        <p>Cada semana organizamos actividades abiertas a todos — miembros de la Iglesia, amigos, vecinos y cualquiera que quiera pasar un buen rato. Las llamamos «Noches de Hogar» porque recrean el espíritu de familia en un ambiente cálido y acogedor.</p>
+        <p>Son noches de juegos, música, conversación, comida y aprendizaje. No necesitas ser miembro de la Iglesia para participar — solo ven con ganas de pasarla bien.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/c68db1aad1273d4efd0a105fdd11d0b5ceba670b/full/,900/0/default" alt="Actividad en grupo" class="content-img">
+
+        <h3>¿Qué hacemos?</h3>
+        <ul>
+            <li>Juegos de mesa, deportes y actividades al aire libre</li>
+            <li>Noches de cocina donde preparamos platos de diferentes culturas</li>
+            <li>Talleres creativos: arte, música, manualidades</li>
+            <li>Noches de cine con películas inspiradoras</li>
+            <li>Breves mensajes espirituales para reflexionar</li>
+            <li>Actividades de servicio comunitario</li>
+        </ul>
+
+        <h3>¿Quién puede venir?</h3>
+        <p>Todos son bienvenidos. Jóvenes, adultos, familias, personas solas — no importa tu edad, idioma o creencias. Nuestras actividades son gratuitas y el ambiente es siempre de respeto y amistad.</p>
+        <p>Es una oportunidad perfecta para conocer gente nueva, practicar español (o inglés), y sentirte parte de una comunidad en Barcelona.</p>
+
+        <img src="https://www.churchofjesuschrist.org/imgs/b38b6e1c8cce0e848b583da201df70c336d35c1e/full/,900/0/default" alt="Comunidad" class="content-img">
+
+        <div class="content-cta">
+            <h3>Únete a la próxima actividad</h3>
+            <p>Escríbenos para saber cuándo y dónde es la próxima Noche de Hogar cerca de ti.</p>
+            <a href="../index.html#contacto" class="btn btn-primary">Quiero participar</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div><div class="footer-brand">Busca Cristo</div><p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p></div>
+        <div class="footer-links"><h4>Enlaces</h4><a href="../actividades.html">Actividades</a><a href="../fe.html">Temas de Fe</a><a href="../index.html#nosotros">Nosotros</a><a href="../index.html#contacto">Contacto</a></div>
+        <div class="footer-links"><h4>Recursos</h4><a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a><a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a><a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
