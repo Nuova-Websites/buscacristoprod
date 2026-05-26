@@ -914,16 +914,17 @@
                     <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
                 </div>
             </div>
-            <div class="form-row">
+            <div class="form-row" id="contactRow">
                 <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    <label for="email">Correo electrónico <span style="font-weight:400;color:var(--text-light)">(o teléfono)</span></label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com">
                 </div>
                 <div class="form-group">
-                    <label for="telefono">Teléfono</label>
+                    <label for="telefono">Teléfono <span style="font-weight:400;color:var(--text-light)">(o correo)</span></label>
                     <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
                 </div>
             </div>
+            <small class="field-error" id="contactError" style="margin-top:-.5rem;margin-bottom:.5rem;">Por favor, indica tu correo electrónico o teléfono.</small>
             <div class="form-group">
                 <label for="direccion">Dirección <span style="font-weight:400;color:var(--text-light)">(opcional)</span></label>
                 <div class="input-with-btn">
@@ -1092,8 +1093,31 @@
     // Form submission
     const API_URL = 'YOUR_API_ENDPOINT_HERE'; // <-- Replace with your API endpoint
 
+    // Email / phone cross-validation
+    const emailInput = document.getElementById('email');
+    const telefonoInput = document.getElementById('telefono');
+    const contactError = document.getElementById('contactError');
+
+    function validateContact() {
+        const hasEmail = emailInput.value.trim() !== '';
+        const hasPhone = telefonoInput.value.trim() !== '';
+        if (!hasEmail && !hasPhone) {
+            contactError.classList.add('show');
+            emailInput.classList.add('field-invalid');
+            telefonoInput.classList.add('field-invalid');
+            return false;
+        }
+        contactError.classList.remove('show');
+        emailInput.classList.remove('field-invalid');
+        telefonoInput.classList.remove('field-invalid');
+        return true;
+    }
+    [emailInput, telefonoInput].forEach(el => el.addEventListener('input', validateContact));
+
     document.getElementById('contactForm').addEventListener('submit', async (e) => {
         e.preventDefault();
+        // Validate email/phone — at least one required
+        if (!validateContact()) { emailInput.focus(); return; }
         // Validate address if provided
         const dirErr = validateDireccion(direccionInput.value);
         if (dirErr) { showDireccionState(dirErr); direccionInput.focus(); return; }
