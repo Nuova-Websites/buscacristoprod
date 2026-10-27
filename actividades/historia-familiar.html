@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- GENERATED FILE. Edit src/pages/actividades/historia-familiar.html (or a partial) and run `npm run build`. -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,14 +13,14 @@
 <body>
 
 <nav class="navbar solid" id="navbar">
-    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <a href="../index.html#" class="nav-brand">Busca Cristo</a>
     <ul class="nav-links" id="navLinks">
         <li><a href="../actividades.html">Actividades</a></li>
         <li><a href="../fe.html">Fe</a></li>
         <li><a href="../index.html#nosotros">Nosotros</a></li>
         <li><a href="../index.html#contacto">Contacto</a></li>
         <li>
-            <select class="lang-select" aria-label="Idioma">
+            <select class="lang-select" id="langSelect" aria-label="Idioma">
                 <option value="es" selected>Español</option>
                 <option value="en">English</option>
                 <option value="fr">Français</option>
@@ -29,17 +30,19 @@
             </select>
         </li>
     </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
 
 <div class="page-hero">
-    <img src="https://www.churchofjesuschrist.org/imgs/f9eaea99e3eb1fa32a2e09125f24c0f4b6b4df52/full/,1400/0/default" alt="Historia Familiar" class="page-hero-img">
+    <img src="../img/photos/historia-familiar-1600.webp" alt="Historia Familiar" class="page-hero-img">
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
         <div class="breadcrumb">
             <a href="../index.html">Inicio</a><span>/</span>
             <a href="../actividades.html">Actividades</a><span>/</span>
-            <span style="color:var(--white)">Historia Familiar</span>
+            <span class="current">Historia Familiar</span>
         </div>
         <h1>Historia Familiar</h1>
         <p>Descubre tus raíces y conecta con tus antepasados a través de FamilySearch.</p>
@@ -52,7 +55,7 @@
         <p>¿Alguna vez te has preguntado quiénes fueron tus bisabuelos? ¿De dónde vino tu familia? La historia familiar te permite descubrir historias fascinantes sobre tus antepasados y entender mejor quién eres.</p>
         <p>Ofrecemos ayuda gratuita para que puedas investigar tu genealogía utilizando FamilySearch, la plataforma genealógica más grande del mundo.</p>
 
-        <img src="https://www.churchofjesuschrist.org/imgs/f9eaea99e3eb1fa32a2e09125f24c0f4b6b4df52/full/,900/0/default" alt="Documentos antiguos" class="content-img">
+        <img src="../img/photos/historia-familiar-900.webp" alt="Documentos antiguos" class="content-img" loading="lazy">
 
         <h3>¿Qué es FamilySearch?</h3>
         <ul>
@@ -71,7 +74,7 @@
             <li>Conectar con familiares que no sabías que existían</li>
         </ul>
 
-        <img src="https://www.churchofjesuschrist.org/imgs/a95f9e4c5d3e6e713a3b7875c9130207b030c3aa/full/,900/0/default" alt="Familia mirando fotos" class="content-img">
+        <img src="../img/photos/familia-mirando-fotos-900.webp" alt="Familia mirando fotos" class="content-img" loading="lazy">
 
         <h3>¿Por qué es importante la historia familiar?</h3>
         <p>Conocer tu historia familiar te da un sentido de identidad y pertenencia. Las investigaciones muestran que las personas que conocen la historia de su familia tienen mayor resiliencia, autoestima y sentido de propósito.</p>
@@ -90,6 +93,17 @@
         <div>
             <div class="footer-brand">Busca Cristo</div>
             <p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p>
+            <div class="social-links">
+    <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </a>
+    <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"></rect><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.5" fill="white"></circle></svg>
+    </a>
+    <a href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a3a6b"></polygon></svg>
+    </a>
+</div>
         </div>
         <div class="footer-links">
             <h4>Enlaces</h4>
@@ -97,6 +111,7 @@
             <a href="../fe.html">Temas de Fe</a>
             <a href="../index.html#nosotros">Nosotros</a>
             <a href="../index.html#contacto">Contacto</a>
+            <a href="../privacidad.html">Privacidad</a>
         </div>
         <div class="footer-links">
             <h4>Recursos</h4>
@@ -105,15 +120,11 @@
             <a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a>
         </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Busca Cristo — Misión España Barcelona</p>
+    </div>
 </footer>
 
-<script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
-document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<script src="../js/site.js"></script>
 </body>
 </html>

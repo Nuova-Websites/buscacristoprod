@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- GENERATED FILE. Edit src/pages/fe/templos.html (or a partial) and run `npm run build`. -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,15 +13,26 @@
 <body>
 
 <nav class="navbar solid" id="navbar">
-    <a href="../index.html" class="nav-brand">Busca Cristo</a>
+    <a href="../index.html#" class="nav-brand">Busca Cristo</a>
     <ul class="nav-links" id="navLinks">
         <li><a href="../actividades.html">Actividades</a></li>
         <li><a href="../fe.html">Fe</a></li>
         <li><a href="../index.html#nosotros">Nosotros</a></li>
         <li><a href="../index.html#contacto">Contacto</a></li>
-        <li><select class="lang-select" aria-label="Idioma"><option value="es" selected>Español</option><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="ca">Català</option><option value="zh">中文</option></select></li>
+        <li>
+            <select class="lang-select" id="langSelect" aria-label="Idioma">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="pt">Português</option>
+                <option value="ca">Català</option>
+                <option value="zh">中文</option>
+            </select>
+        </li>
     </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
 
 <div class="page-hero">
@@ -30,7 +42,7 @@
         <div class="breadcrumb">
             <a href="../index.html">Inicio</a><span>/</span>
             <a href="../fe.html">Temas de Fe</a><span>/</span>
-            <span style="color:var(--white)">Los Templos</span>
+            <span class="current">Los Templos</span>
         </div>
         <h1>Los Templos</h1>
         <p>Lugares sagrados donde las familias pueden unirse para siempre y hacer convenios con Dios.</p>
@@ -43,7 +55,7 @@
         <p>Para La Iglesia de Jesucristo de los Santos de los Últimos Días, los templos son los edificios más sagrados de la tierra. No son capillas donde se celebran los servicios dominicales — son lugares especiales dedicados a ordenanzas sagradas que vinculan a las familias no solo en esta vida, sino también en la eternidad.</p>
         <p>En las Escrituras, los templos siempre han sido el lugar donde Dios se encuentra con Sus hijos. Desde el tabernáculo de Moisés hasta el templo de Salomón, el templo representa la presencia de Dios en la tierra.</p>
 
-        <img src="https://www.churchofjesuschrist.org/imgs/2cb9aefde780a0e68349a3d0757752eb10ccb1cd/full/,900/0/default" alt="Templo" class="content-img">
+        <img src="../img/photos/templo-900.webp" alt="Templo" class="content-img" loading="lazy">
 
         <h3>¿Qué ocurre en el templo?</h3>
         <p>En los templos se realizan ordenanzas sagradas que no se pueden hacer en ningún otro lugar. Estas ordenanzas incluyen:</p>
@@ -57,7 +69,7 @@
         <p>Creemos que la familia puede ser eterna. El amor que sentimos por nuestros seres queridos no tiene por qué terminar con la muerte. En el templo, una familia puede ser «sellada» por el poder del sacerdocio — lo que se ata en la tierra queda atado en el cielo.</p>
         <p>Esta doctrina da una perspectiva completamente diferente a la pérdida, el dolor y las relaciones familiares. No se trata solo de vivir juntos durante esta vida — se trata de estar juntos para siempre.</p>
 
-        <img src="https://www.churchofjesuschrist.org/imgs/a95f9e4c5d3e6e713a3b7875c9130207b030c3aa/full/,900/0/default" alt="Familia" class="content-img">
+        <img src="../img/photos/familia-mirando-fotos-900.webp" alt="Familia" class="content-img" loading="lazy">
 
         <h3>¿Puedo visitar un templo?</h3>
         <p>Los templos están abiertos al público solo cuando son recién construidos o renovados, durante un período de «casa abierta». Después, solo los miembros de la Iglesia que viven sus principios pueden entrar. Sin embargo, los terrenos del templo siempre están abiertos y muchos tienen centros de visitantes donde cualquier persona puede aprender más.</p>
@@ -73,19 +85,41 @@
 
 <footer class="footer">
     <div class="footer-content">
-        <div><div class="footer-brand">Busca Cristo</div><p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p></div>
-        <div class="footer-links"><h4>Enlaces</h4><a href="../actividades.html">Actividades</a><a href="../fe.html">Temas de Fe</a><a href="../index.html#nosotros">Nosotros</a><a href="../index.html#contacto">Contacto</a></div>
-        <div class="footer-links"><h4>Recursos</h4><a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a><a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a><a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a></div>
+        <div>
+            <div class="footer-brand">Busca Cristo</div>
+            <p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p>
+            <div class="social-links">
+    <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </a>
+    <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"></rect><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.5" fill="white"></circle></svg>
+    </a>
+    <a href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a3a6b"></polygon></svg>
+    </a>
+</div>
+        </div>
+        <div class="footer-links">
+            <h4>Enlaces</h4>
+            <a href="../actividades.html">Actividades</a>
+            <a href="../fe.html">Temas de Fe</a>
+            <a href="../index.html#nosotros">Nosotros</a>
+            <a href="../index.html#contacto">Contacto</a>
+            <a href="../privacidad.html">Privacidad</a>
+        </div>
+        <div class="footer-links">
+            <h4>Recursos</h4>
+            <a href="https://www.churchofjesuschrist.org/?lang=spa" target="_blank" rel="noopener">Iglesia oficial</a>
+            <a href="https://www.familysearch.org/" target="_blank" rel="noopener">FamilySearch</a>
+            <a href="https://www.comeuntochrist.org/es" target="_blank" rel="noopener">Ven a Cristo</a>
+        </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 Busca Cristo — Misión España Barcelona</p></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Busca Cristo — Misión España Barcelona</p>
+    </div>
 </footer>
 
-<script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
-document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<script src="../js/site.js"></script>
 </body>
 </html>

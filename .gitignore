@@ -1,0 +1,17 @@
+# Google Drive sync temp files
+.tmp.driveupload/
+.tmp.drivedownload/
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Video editing scratch files
+video-work/

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- GENERATED FILE. Edit src/pages/fe.html (or a partial) and run `npm run build`. -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,14 +13,14 @@
 <body>
 
 <nav class="navbar solid" id="navbar">
-    <a href="index.html" class="nav-brand">Busca Cristo</a>
+    <a href="index.html#" class="nav-brand">Busca Cristo</a>
     <ul class="nav-links" id="navLinks">
         <li><a href="actividades.html">Actividades</a></li>
         <li><a href="fe.html">Fe</a></li>
         <li><a href="index.html#nosotros">Nosotros</a></li>
         <li><a href="index.html#contacto">Contacto</a></li>
         <li>
-            <select class="lang-select" aria-label="Idioma">
+            <select class="lang-select" id="langSelect" aria-label="Idioma">
                 <option value="es" selected>Español</option>
                 <option value="en">English</option>
                 <option value="fr">Français</option>
@@ -29,7 +30,7 @@
             </select>
         </li>
     </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
     </button>
 </nav>
@@ -41,7 +42,7 @@
         <div class="breadcrumb">
             <a href="index.html">Inicio</a>
             <span>/</span>
-            <span style="color:var(--white)">Temas de Fe</span>
+            <span class="current">Temas de Fe</span>
         </div>
         <h1>Temas de Fe</h1>
         <p>Explora las respuestas a las preguntas más importantes de la vida. Encuentra esperanza, propósito y paz.</p>
@@ -51,7 +52,7 @@
 <section>
     <div class="cards-grid">
         <a href="fe/proposito-vida.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/efb6b620fba011ebbf18eeeeac1e5d0bd05a63e4/full/,800/0/default" alt="Propósito de la vida" class="card-img" loading="lazy">
+            <img src="img/photos/nuevo-amanecer-800.webp" alt="Propósito de la vida" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>El Propósito de la Vida</h3>
                 <p>¿Por qué estamos aquí? Descubre el plan que Dios tiene para ti y para cada uno de Sus hijos.</p>
@@ -59,7 +60,7 @@
             </div>
         </a>
         <a href="fe/jesucristo.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/334a1d2f9c379c03dc210d41c92c1552f821c5dc/full/,800/0/default" alt="Jesucristo" class="card-img" loading="lazy">
+            <img src="img/photos/libertad-y-esperanza-800.webp" alt="Jesucristo" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Jesucristo</h3>
                 <p>Él es el centro de nuestra fe. Conoce Su vida, Sus enseñanzas y cómo Su amor puede transformar la tuya.</p>
@@ -67,7 +68,7 @@
             </div>
         </a>
         <a href="fe/bautismo.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/efcf2368dd234308073b31a96af3c9a1065cf1b5/full/,800/0/default" alt="El Bautismo" class="card-img" loading="lazy">
+            <img src="img/photos/el-bautismo-800.webp" alt="El Bautismo" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>El Bautismo</h3>
                 <p>El primer paso en el camino del discipulado. Aprende por qué el bautismo es esencial en el plan de Dios.</p>
@@ -75,7 +76,7 @@
             </div>
         </a>
         <a href="fe/familia.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/a95f9e4c5d3e6e713a3b7875c9130207b030c3aa/full/,800/0/default" alt="La Familia" class="card-img" loading="lazy">
+            <img src="img/photos/familia-mirando-fotos-800.webp" alt="La Familia" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>La Familia</h3>
                 <p>La familia es central en el plan de Dios. Descubre cómo fortalecer los lazos familiares para siempre.</p>
@@ -83,7 +84,7 @@
             </div>
         </a>
         <a href="fe/oracion.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/6b138efbce50c6a8289a49ec2de852655be8521d/full/,800/0/default" alt="La Oración" class="card-img" loading="lazy">
+            <img src="img/photos/esperanza-y-sanacion-800.webp" alt="La Oración" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>La Oración</h3>
                 <p>Habla con Dios. Él te escucha y quiere responder tus preguntas y guiarte en tu camino.</p>
@@ -91,7 +92,7 @@
             </div>
         </a>
         <a href="fe/arrepentimiento.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/dc14475203771b90881d2442422b87b8c5526a3c/full/,800/0/default" alt="El Arrepentimiento" class="card-img" loading="lazy">
+            <img src="img/photos/el-arrepentimiento-800.webp" alt="El Arrepentimiento" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>El Arrepentimiento</h3>
                 <p>Nunca es tarde para empezar de nuevo. El cambio es posible gracias a Jesucristo.</p>
@@ -107,7 +108,7 @@
             </div>
         </a>
         <a href="fe/restauracion.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/fe5db8da0174bc36aff99e6ae7b55e337d9eb965/full/,800/0/default" alt="La Restauración" class="card-img" loading="lazy">
+            <img src="img/photos/la-restauracion-800.webp" alt="La Restauración" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>La Restauración</h3>
                 <p>¿Por qué era necesaria una restauración? Descubre cómo el evangelio completo de Jesucristo volvió a la tierra.</p>
@@ -115,7 +116,7 @@
             </div>
         </a>
         <a href="fe/libro-de-mormon.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/2689b23c629431574fcf24d10e93422ed056abc0/full/,800/0/default" alt="El Libro de Mormón" class="card-img" loading="lazy">
+            <img src="img/photos/el-libro-de-mormon-800.webp" alt="El Libro de Mormón" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>El Libro de Mormón</h3>
                 <p>Otro testamento de Jesucristo, escrito por profetas antiguos del continente americano. Un libro que cambia vidas.</p>
@@ -123,7 +124,7 @@
             </div>
         </a>
         <a href="fe/origen-y-destino.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/b5e8e06a756411ec8f02eeeeac1eaad8eb19d0ac/full/,800/0/default" alt="Preguntas Eternas" class="card-img" loading="lazy">
+            <img src="img/photos/preguntas-eternas-800.webp" alt="Preguntas Eternas" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Preguntas Eternas</h3>
                 <p>¿De dónde venimos? ¿Cuál es el propósito de esta vida? ¿Qué nos espera después de la muerte?</p>
@@ -133,7 +134,7 @@
     </div>
 </section>
 
-<section style="background:var(--off-white);">
+<section class="bg-soft">
     <div class="two-col">
         <div class="two-col-text reveal">
             <h2>¿Tienes preguntas?</h2>
@@ -141,7 +142,7 @@
             <p>Habla con nosotros sin ningún compromiso. Tu búsqueda es importante.</p>
             <a href="index.html#contacto" class="btn btn-blue">Hablemos</a>
         </div>
-        <img src="https://www.churchofjesuschrist.org/imgs/c68db1aad1273d4efd0a105fdd11d0b5ceba670b/full/,800/0/default" alt="Conversación" class="reveal">
+        <img src="img/photos/aprendiendo-juntos-800.webp" alt="Conversación" class="reveal" loading="lazy">
     </div>
 </section>
 
@@ -150,6 +151,17 @@
         <div>
             <div class="footer-brand">Busca Cristo</div>
             <p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p>
+            <div class="social-links">
+    <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </a>
+    <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"></rect><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.5" fill="white"></circle></svg>
+    </a>
+    <a href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a3a6b"></polygon></svg>
+    </a>
+</div>
         </div>
         <div class="footer-links">
             <h4>Enlaces</h4>
@@ -157,6 +169,7 @@
             <a href="fe.html">Temas de Fe</a>
             <a href="index.html#nosotros">Nosotros</a>
             <a href="index.html#contacto">Contacto</a>
+            <a href="privacidad.html">Privacidad</a>
         </div>
         <div class="footer-links">
             <h4>Recursos</h4>
@@ -170,12 +183,6 @@
     </div>
 </footer>
 
-<script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
-document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>

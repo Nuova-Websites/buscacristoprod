@@ -1,0 +1,318 @@
+---
+title: Busca Cristo — Misión España Barcelona
+description: Busca Cristo con nosotros. Encuentra tu fe a tu propia manera. Misión España Barcelona.
+navClass: navbar
+bodyClass: home
+script: js/home.js
+---
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <video class="hero-video" autoplay muted loop playsinline poster="img/hero-poster.jpg">
+        <source src="video/hero.mp4" type="video/mp4">
+    </video>
+    <img src="img/hero-poster.jpg" alt="Busca Cristo" class="hero-video hero-fallback" id="heroFallback">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Busca a <span>Cristo</span> con nosotros</h1>
+        <p>Encuentra tu fe a tu propia manera. Estamos aquí para acompañarte en tu camino espiritual.</p>
+        <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary">Quiero saber más</a>
+            <a href="#servicios" class="btn btn-outline">Nuestros servicios</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="nosotros">
+    <div class="about-container">
+        <img src="img/temple.webp" alt="Templo Santo Domingo" class="about-img reveal" loading="lazy">
+        <div class="about-text reveal">
+            <h2>Misión España Barcelona</h2>
+            <p>Somos misioneros voluntarios de La Iglesia de Jesucristo de los Santos de los Últimos Días sirviendo en España.</p>
+            <p>Dedicamos nuestro tiempo a servir a la comunidad, compartir un mensaje de esperanza y ayudar a quienes buscan fortalecer su relación con Dios.</p>
+            <p>Todos nuestros servicios son completamente gratuitos. No importa tu origen, cultura o idioma — eres bienvenido.</p>
+            <a href="#contacto" class="btn btn-primary btn-spaced">Habla con nosotros</a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+    <div class="section-header reveal">
+        <h2>Lo que ofrecemos</h2>
+        <p>Todos nuestros servicios son gratuitos, ofrecidos por voluntarios que quieren compartir lo que les ha dado paz y propósito.</p>
+        <div class="section-divider"></div>
+    </div>
+    <div class="carousel-wrapper" id="servicesCarousel">
+        <button class="carousel-btn prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel-viewport">
+            <div class="carousel-track cols-3" data-visible="3">
+                <div class="service-card">
+                    <img src="{{root}}img/photos/visita-nuestra-iglesia-800.webp" alt="Visita nuestra iglesia" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Visita nuestra iglesia</h3>
+                        <p>Ven a nuestro servicio de domingo sin compromiso. Siente paz y acércate más a Dios: puedes quedarte el tiempo que quieras y nadie te pedirá nada.</p>
+                        <a href="actividades/visita-nuestra-iglesia.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{{root}}img/photos/estudio-de-las-escrituras-800.webp" alt="Estudio de las Escrituras" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Estudio de las Escrituras</h3>
+                        <p>Aprende con nosotros el Libro de Mormón y la Biblia en un ambiente de respeto y amor. Dos testamentos, un mismo Cristo.</p>
+                        <a href="actividades/libro-de-mormon.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{{root}}img/photos/historia-familiar-800.webp" alt="Historia familiar" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Historia Familiar</h3>
+                        <p>Descubre tus raíces y conecta con tus antepasados. Te ayudamos gratuitamente con FamilySearch.</p>
+                        <a href="actividades/historia-familiar.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{{root}}img/photos/clases-de-idiomas-800.webp" alt="Clases de Inglés y Español" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Clases de Inglés y Español</h3>
+                        <p>Aprende inglés o español gratis con nuestros misioneros. Clases prácticas y divertidas para todos los niveles.</p>
+                        <a href="actividades/clases-ingles.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{{root}}img/photos/apoyo-y-bienestar-800.webp" alt="Apoyo y bienestar" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Apoyo y Bienestar</h3>
+                        <p>Programas de apoyo emocional y recuperación. No estás solo — estamos aquí para acompañarte en momentos difíciles.</p>
+                        <a href="actividades/apoyo-bienestar.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{{root}}img/photos/aprendiendo-juntos-800.webp" alt="Noches de Hogar" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Noches de Hogar</h3>
+                        <p>Actividades semanales para hacer amigos, jugar, aprender y disfrutar de una comunidad que te recibe con los brazos abiertos.</p>
+                        <a href="actividades/noches-de-hogar.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{{root}}img/photos/apoyo-comunitario-800.webp" alt="Servicio Comunitario" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Servicio Comunitario</h3>
+                        <p>Únete a nuestros proyectos de servicio comunitario. Juntos podemos hacer una diferencia real.</p>
+                        <a href="actividades/servicio-comunitario.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="{{root}}img/photos/estudiando-juntos-800.webp" alt="Instituto" class="service-img" loading="lazy">
+                    <div class="service-body">
+                        <h3>Instituto</h3>
+                        <p>Reuniones semanales para jóvenes: una lección sobre Jesucristo seguida de juegos y comida. Fe, amistad y diversión.</p>
+                        <a href="actividades/instituto.html" class="service-link">Saber más →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</section>
+
+<!-- FAITH -->
+<section class="faith" id="fe">
+    <div class="section-header reveal">
+        <h2>Temas de Fe</h2>
+        <p>Explora las respuestas a las preguntas más importantes de la vida.</p>
+        <div class="section-divider"></div>
+    </div>
+    <div class="carousel-wrapper" id="faithCarousel">
+        <button class="carousel-btn prev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel-viewport">
+            <div class="carousel-track cols-4" data-visible="4">
+                <a href="fe/proposito-vida.html" class="faith-card">
+                    <img src="{{root}}img/photos/nuevo-amanecer-800.webp" alt="Propósito de la vida" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>El Propósito de la Vida</h3>
+                        <p>¿Por qué estamos aquí? Descubre el plan que Dios tiene para ti.</p>
+                    </div>
+                </a>
+                <a href="fe/jesucristo.html" class="faith-card">
+                    <img src="img/woman_taken_in_adultery.webp" alt="Jesucristo" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>Jesucristo</h3>
+                        <p>Él es el centro de nuestra fe. Conoce Su vida y Sus enseñanzas.</p>
+                    </div>
+                </a>
+                <a href="fe/bautismo.html" class="faith-card">
+                    <img src="{{root}}img/photos/el-bautismo-800.webp" alt="El Bautismo" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>El Bautismo</h3>
+                        <p>El primer paso en el camino del discipulado.</p>
+                    </div>
+                </a>
+                <a href="fe/familia.html" class="faith-card">
+                    <img src="{{root}}img/photos/familia-mirando-fotos-800.webp" alt="La Familia" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>La Familia</h3>
+                        <p>La familia es central en el plan de Dios.</p>
+                    </div>
+                </a>
+                <a href="fe/oracion.html" class="faith-card">
+                    <img src="{{root}}img/photos/esperanza-y-sanacion-800.webp" alt="La Oración" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>La Oración</h3>
+                        <p>Habla con Dios. Él te escucha y quiere guiarte.</p>
+                    </div>
+                </a>
+                <a href="fe/arrepentimiento.html" class="faith-card">
+                    <img src="{{root}}img/photos/el-arrepentimiento-800.webp" alt="El Arrepentimiento" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>El Arrepentimiento</h3>
+                        <p>Nunca es tarde para empezar de nuevo.</p>
+                    </div>
+                </a>
+                <a href="fe/templos.html" class="faith-card">
+                    <img src="img/temple.webp" alt="Los Templos" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>Los Templos</h3>
+                        <p>Lugares sagrados donde las familias se unen para siempre.</p>
+                    </div>
+                </a>
+                <a href="fe/restauracion.html" class="faith-card">
+                    <img src="{{root}}img/photos/la-restauracion-800.webp" alt="La Restauración" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>La Restauración</h3>
+                        <p>El evangelio de Jesucristo restaurado en la tierra.</p>
+                    </div>
+                </a>
+                <a href="fe/libro-de-mormon.html" class="faith-card">
+                    <img src="{{root}}img/photos/el-libro-de-mormon-800.webp" alt="El Libro de Mormón" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>El Libro de Mormón</h3>
+                        <p>Otro testamento de Jesucristo. Una escritura antigua para el mundo de hoy.</p>
+                    </div>
+                </a>
+                <a href="fe/origen-y-destino.html" class="faith-card">
+                    <img src="{{root}}img/photos/preguntas-eternas-800.webp" alt="Preguntas Eternas" class="faith-card-img" loading="lazy">
+                    <div class="faith-card-overlay"></div>
+                    <div class="faith-card-body">
+                        <h3>Preguntas Eternas</h3>
+                        <p>¿De dónde venimos? ¿Qué pasará después de esta vida?</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+    <div class="section-header reveal">
+        <h2>Contáctanos</h2>
+        <p>Queremos saber de ti. Escríbenos y te responderemos lo antes posible.</p>
+        <div class="section-divider"></div>
+    </div>
+    <div class="contact-container">
+        <div class="contact-info reveal">
+            <h3>¿Tienes preguntas?</h3>
+            <p>Estamos aquí para ayudarte. No importa tu pregunta, queremos escucharte y acompañarte.</p>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>España</span>
+            </div>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>buscacristo@gmail.com</span>
+            </div>
+            {{> social}}
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
+                </div>
+            </div>
+            <div class="form-row" id="contactRow">
+                <div class="form-group">
+                    <label for="email">Correo electrónico <span class="label-hint">(o teléfono)</span></label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono <span class="label-hint">(o correo)</span></label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+                </div>
+            </div>
+            <small class="field-error field-error-contact" id="contactError">Por favor, indica tu correo electrónico o teléfono.</small>
+            <div class="form-group">
+                <label for="direccion">Dirección <span class="label-hint">(opcional)</span></label>
+                <div class="input-with-btn">
+                    <input type="text" id="direccion" name="direccion" placeholder="Calle, número, ciudad">
+                    <button type="button" id="geoBtn" class="geo-btn" title="Usar mi ubicación actual" aria-label="Obtener ubicación automáticamente">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v4M12 19v4M1 12h4M19 12h4"></path>
+                            <circle cx="12" cy="12" r="9"></circle>
+                        </svg>
+                    </button>
+                </div>
+                <small class="field-error" id="direccionError"></small>
+                <small class="field-note">Si usas el botón de ubicación, tus coordenadas se envían a OpenStreetMap para obtener la dirección.</small>
+            </div>
+            <div class="form-group">
+                <label for="interes">¿Qué te interesa?</label>
+                <select id="interes" name="interes">
+                    <option value="">Selecciona una opción</option>
+                    <option value="libro-de-mormon">Recibir un Libro de Mormón</option>
+                    <option value="visitar-capilla">Visitar una capilla</option>
+                    <option value="estudio-biblico">Estudio de la Biblia</option>
+                    <option value="historia-familiar">Historia Familiar</option>
+                    <option value="clases-ingles">Clases de Inglés</option>
+                    <option value="apoyo-bienestar">Apoyo y Bienestar</option>
+                    <option value="hablar-misioneros">Hablar con misioneros</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escríbenos tu pregunta o comentario..."></textarea>
+            </div>
+            <div class="consent-group">
+                <input type="checkbox" id="consentimiento" name="consentimiento" required>
+                <label for="consentimiento">Acepto que la Misión me contacte y que se guarden mis datos según la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</label>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">Enviar mensaje</button>
+            <div class="form-success" id="formSuccess">
+                ¡Gracias por tu mensaje! Te contactaremos pronto. 🙏
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->

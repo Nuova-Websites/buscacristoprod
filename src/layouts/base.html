@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- GENERATED FILE. Edit src/pages/{{srcPath}} (or a partial) and run `npm run build`. -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+{{#if description}}    <meta name="description" content="{{description}}">
+{{/if}}    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{root}}css/styles.css">
+</head>
+<body{{#if bodyClass}} class="{{bodyClass}}"{{/if}}>
+
+{{> nav}}
+
+{{content}}
+
+{{> footer}}
+
+<script src="{{root}}js/site.js"></script>
+{{#if script}}<script src="{{root}}{{script}}"></script>
+{{/if}}</body>
+</html>

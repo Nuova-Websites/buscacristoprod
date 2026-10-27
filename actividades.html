@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- GENERATED FILE. Edit src/pages/actividades.html (or a partial) and run `npm run build`. -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,14 +13,14 @@
 <body>
 
 <nav class="navbar solid" id="navbar">
-    <a href="index.html" class="nav-brand">Busca Cristo</a>
+    <a href="index.html#" class="nav-brand">Busca Cristo</a>
     <ul class="nav-links" id="navLinks">
         <li><a href="actividades.html">Actividades</a></li>
         <li><a href="fe.html">Fe</a></li>
         <li><a href="index.html#nosotros">Nosotros</a></li>
         <li><a href="index.html#contacto">Contacto</a></li>
         <li>
-            <select class="lang-select" aria-label="Idioma">
+            <select class="lang-select" id="langSelect" aria-label="Idioma">
                 <option value="es" selected>Español</option>
                 <option value="en">English</option>
                 <option value="fr">Français</option>
@@ -29,7 +30,7 @@
             </select>
         </li>
     </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
     </button>
 </nav>
@@ -41,7 +42,7 @@
         <div class="breadcrumb">
             <a href="index.html">Inicio</a>
             <span>/</span>
-            <span style="color:var(--white)">Actividades</span>
+            <span class="current">Actividades</span>
         </div>
         <h1>¿Cómo te podemos ayudar?</h1>
         <p>Todos nuestros servicios son gratuitos, ofrecidos por voluntarios que quieren compartir lo que les ha dado paz y propósito.</p>
@@ -51,16 +52,16 @@
 <!-- Cards grid -->
 <section>
     <div class="cards-grid">
-        <a href="actividades/ven-y-ve.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/9a24d79163b63ecaf6e08f2129cd1d79e7d1cc79/full/,800/0/default" alt="Ven y Ve" class="card-img" loading="lazy">
+        <a href="actividades/visita-nuestra-iglesia.html" class="card reveal">
+            <img src="img/photos/visita-nuestra-iglesia-800.webp" alt="Visita nuestra iglesia" class="card-img" loading="lazy">
             <div class="card-body">
-                <h3>Ven y Ve</h3>
-                <p>Visita una de nuestras congregaciones locales. Sé parte de una comunidad que se preocupa por ti.</p>
+                <h3>Visita nuestra iglesia</h3>
+                <p>Ven a nuestro servicio de domingo sin compromiso. Siente paz y acércate más a Dios: puedes quedarte el tiempo que quieras y nadie te pedirá nada.</p>
                 <span class="card-link">Saber más →</span>
             </div>
         </a>
         <a href="actividades/libro-de-mormon.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/8c02b6fecaa1477148b7ee441529eee2b23e4e40/full/,800/0/default" alt="Estudio de las Escrituras" class="card-img" loading="lazy">
+            <img src="img/photos/estudio-de-las-escrituras-800.webp" alt="Estudio de las Escrituras" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Estudio de las Escrituras</h3>
                 <p>Ven a estudiar el Libro de Mormón y la Biblia con nosotros. Sesiones gratuitas, sin compromiso, y con misioneros que te guían a tu ritmo.</p>
@@ -68,7 +69,7 @@
             </div>
         </a>
         <a href="actividades/historia-familiar.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/f9eaea99e3eb1fa32a2e09125f24c0f4b6b4df52/full/,800/0/default" alt="Historia Familiar" class="card-img" loading="lazy">
+            <img src="img/photos/historia-familiar-800.webp" alt="Historia Familiar" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Historia Familiar</h3>
                 <p>Descubre tus raíces y conecta con tus antepasados. Te ayudamos gratuitamente con FamilySearch.</p>
@@ -76,7 +77,7 @@
             </div>
         </a>
         <a href="actividades/clases-ingles.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/941a08cd15da5eff2ddcd432c37348936d1ddec5/full/,800/0/default" alt="Clases de Inglés y Español" class="card-img" loading="lazy">
+            <img src="img/photos/clases-de-idiomas-800.webp" alt="Clases de Inglés y Español" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Clases de Inglés y Español</h3>
                 <p>Aprende inglés o español gratis con nuestros misioneros nativos. Clases prácticas y divertidas para todos los niveles.</p>
@@ -84,7 +85,7 @@
             </div>
         </a>
         <a href="actividades/noches-de-hogar.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/c68db1aad1273d4efd0a105fdd11d0b5ceba670b/full/,800/0/default" alt="Noches de Hogar" class="card-img" loading="lazy">
+            <img src="img/photos/aprendiendo-juntos-800.webp" alt="Noches de Hogar" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Noches de Hogar</h3>
                 <p>Actividades semanales para hacer amigos, jugar, aprender y disfrutar de una comunidad que te recibe con los brazos abiertos.</p>
@@ -92,7 +93,7 @@
             </div>
         </a>
         <a href="actividades/servicio-comunitario.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/b38b6e1c8cce0e848b583da201df70c336d35c1e/full/,800/0/default" alt="Servicio Comunitario" class="card-img" loading="lazy">
+            <img src="img/photos/apoyo-comunitario-800.webp" alt="Servicio Comunitario" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Servicio Comunitario</h3>
                 <p>Únete a nuestros proyectos de servicio comunitario. Juntos podemos hacer una diferencia real.</p>
@@ -100,7 +101,7 @@
             </div>
         </a>
         <a href="actividades/apoyo-bienestar.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/a27a5dc9082d05059da89d11d67b6f45ce50feab/full/,800/0/default" alt="Apoyo y Bienestar" class="card-img" loading="lazy">
+            <img src="img/photos/apoyo-y-bienestar-800.webp" alt="Apoyo y Bienestar" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Apoyo y Bienestar</h3>
                 <p>Programas de apoyo emocional y recuperación. No estás solo — estamos aquí para acompañarte en momentos difíciles.</p>
@@ -108,7 +109,7 @@
             </div>
         </a>
         <a href="actividades/instituto.html" class="card reveal">
-            <img src="https://www.churchofjesuschrist.org/imgs/03090cc8a607cfe68bd2e11222f227004911bf18/full/,800/0/default" alt="Instituto" class="card-img" loading="lazy">
+            <img src="img/photos/estudiando-juntos-800.webp" alt="Instituto" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Instituto</h3>
                 <p>Reuniones semanales para jóvenes: una lección sobre Jesucristo, juegos y comida. Un espacio de fe, amistad y mucha diversión.</p>
@@ -119,10 +120,10 @@
 </section>
 
 <!-- VOLUNTEER CTA -->
-<section style="background:var(--off-white); padding: 4rem 2rem; text-align:center;">
-    <div style="max-width:700px; margin:0 auto;">
-        <h2 style="font-family:'Playfair Display',serif; color:var(--primary); font-size:2rem; margin-bottom:1rem;">Todos nuestros servicios son gratuitos</h2>
-        <p style="color:var(--text-light); font-size:1.05rem; line-height:1.7; margin-bottom:2rem;">Somos misioneros voluntarios dedicando nuestro tiempo a servir en España. Nuestro deseo es simplemente compartir lo que nos ha dado esperanza y felicidad.</p>
+<section class="cta-band">
+    <div class="cta-band-inner">
+        <h2>Todos nuestros servicios son gratuitos</h2>
+        <p>Somos misioneros voluntarios dedicando nuestro tiempo a servir en España. Nuestro deseo es simplemente compartir lo que nos ha dado esperanza y felicidad.</p>
         <a href="index.html#contacto" class="btn btn-blue">Contáctanos</a>
     </div>
 </section>
@@ -132,6 +133,17 @@
         <div>
             <div class="footer-brand">Busca Cristo</div>
             <p class="footer-desc">Misión España Barcelona. La Iglesia de Jesucristo de los Santos de los Últimos Días.</p>
+            <div class="social-links">
+    <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </a>
+    <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"></rect><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.5" fill="white"></circle></svg>
+    </a>
+    <a href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a3a6b"></polygon></svg>
+    </a>
+</div>
         </div>
         <div class="footer-links">
             <h4>Enlaces</h4>
@@ -139,6 +151,7 @@
             <a href="fe.html">Temas de Fe</a>
             <a href="index.html#nosotros">Nosotros</a>
             <a href="index.html#contacto">Contacto</a>
+            <a href="privacidad.html">Privacidad</a>
         </div>
         <div class="footer-links">
             <h4>Recursos</h4>
@@ -152,13 +165,6 @@
     </div>
 </footer>
 
-<script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
-document.getElementById('mobileToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
-const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.15});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
