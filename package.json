@@ -4,5 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "node-html-parser": "^9.0.5"
   }
 }

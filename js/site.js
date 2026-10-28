@@ -40,4 +40,16 @@
     }, { threshold: 0.15 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Language picker: remember the choice and open the same page in that language
+    const langSelect = document.getElementById('langSelect');
+    if (langSelect) {
+        const meta = (name) => (document.querySelector(`meta[name="${name}"]`) || {}).content;
+        langSelect.value = document.documentElement.lang;
+        langSelect.addEventListener('change', () => {
+            const lang = langSelect.value;
+            try { localStorage.setItem('lang', lang); } catch (e) { /* storage blocked: still switch */ }
+            location.href = meta('site-root') + (lang === 'es' ? '' : lang + '/') + meta('page-rel') + location.hash;
+        });
+    }
 })();

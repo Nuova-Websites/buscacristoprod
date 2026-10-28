@@ -1,0 +1,50 @@
+{
+ "La dirección parece demasiado corta.": {
+  "en": "The address looks too short.",
+  "fr": "L'adresse semble trop courte.",
+  "pt": "O endereço parece demasiado curto.",
+  "ca": "L'adreça sembla massa curta."
+ },
+ "Ingresa una dirección con nombre de calle.": {
+  "en": "Enter an address that includes a street name.",
+  "fr": "Saisissez une adresse comportant un nom de rue.",
+  "pt": "Introduza um endereço com o nome da rua.",
+  "ca": "Introdueix una adreça amb el nom del carrer."
+ },
+ "Incluye el número o localidad (ej: Calle Mayor 5, Madrid).": {
+  "en": "Include the number or town (e.g. 5 Main Street, Madrid).",
+  "fr": "Indiquez le numéro ou la ville (ex. : 5 rue Principale, Madrid).",
+  "pt": "Inclua o número ou a localidade (ex.: Rua Principal 5, Madrid).",
+  "ca": "Inclou el número o la localitat (p. ex.: Carrer Major 5, Madrid)."
+ },
+ "Tu navegador no soporta geolocalización.": {
+  "en": "Your browser doesn't support geolocation.",
+  "fr": "Votre navigateur ne prend pas en charge la géolocalisation.",
+  "pt": "O seu navegador não suporta geolocalização.",
+  "ca": "El teu navegador no admet la geolocalització."
+ },
+ "No se pudo obtener la dirección. Inténtalo manualmente.": {
+  "en": "We couldn't get the address. Please enter it manually.",
+  "fr": "Impossible d'obtenir l'adresse. Veuillez la saisir manuellement.",
+  "pt": "Não foi possível obter o endereço. Introduza-o manualmente.",
+  "ca": "No s'ha pogut obtenir l'adreça. Introdueix-la manualment."
+ },
+ "No se pudo acceder a tu ubicación. Verifica los permisos del navegador.": {
+  "en": "We couldn't access your location. Check your browser permissions.",
+  "fr": "Impossible d'accéder à votre position. Vérifiez les autorisations du navigateur.",
+  "pt": "Não foi possível aceder à sua localização. Verifique as permissões do navegador.",
+  "ca": "No s'ha pogut accedir a la teva ubicació. Comprova els permisos del navegador."
+ },
+ "Enviando...": {
+  "en": "Sending...",
+  "fr": "Envoi en cours...",
+  "pt": "A enviar...",
+  "ca": "Enviant..."
+ },
+ "Hubo un error al enviar el mensaje. Inténtalo de nuevo.": {
+  "en": "There was an error sending your message. Please try again.",
+  "fr": "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.",
+  "pt": "Ocorreu um erro ao enviar a mensagem. Tente novamente.",
+  "ca": "S'ha produït un error en enviar el missatge. Torna-ho a provar."
+ }
+}

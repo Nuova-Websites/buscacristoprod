@@ -7,10 +7,10 @@ script: js/home.js
 ---
 <!-- HERO -->
 <section class="hero" id="inicio">
-    <video class="hero-video" autoplay muted loop playsinline poster="img/hero-poster.jpg">
-        <source src="video/hero.mp4" type="video/mp4">
+    <video class="hero-video" autoplay muted loop playsinline poster="{{root}}img/hero-poster.jpg">
+        <source src="{{root}}video/hero.mp4" type="video/mp4">
     </video>
-    <img src="img/hero-poster.jpg" alt="Busca Cristo" class="hero-video hero-fallback" id="heroFallback">
+    <img src="{{root}}img/hero-poster.jpg" alt="Busca Cristo" class="hero-video hero-fallback" id="heroFallback">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Busca a <span>Cristo</span> con nosotros</h1>
@@ -30,7 +30,7 @@ script: js/home.js
 <!-- ABOUT -->
 <section class="about" id="nosotros">
     <div class="about-container">
-        <img src="img/temple.webp" alt="Templo Santo Domingo" class="about-img reveal" loading="lazy">
+        <img src="{{root}}img/temple.webp" alt="Templo Santo Domingo" class="about-img reveal" loading="lazy">
         <div class="about-text reveal">
             <h2>Misión España Barcelona</h2>
             <p>Somos misioneros voluntarios de La Iglesia de Jesucristo de los Santos de los Últimos Días sirviendo en España.</p>
@@ -59,7 +59,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Visita nuestra iglesia</h3>
                         <p>Ven a nuestro servicio de domingo sin compromiso. Siente paz y acércate más a Dios: puedes quedarte el tiempo que quieras y nadie te pedirá nada.</p>
-                        <a href="actividades/visita-nuestra-iglesia.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/visita-nuestra-iglesia.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -67,7 +67,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Estudio de las Escrituras</h3>
                         <p>Aprende con nosotros el Libro de Mormón y la Biblia en un ambiente de respeto y amor. Dos testamentos, un mismo Cristo.</p>
-                        <a href="actividades/libro-de-mormon.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/libro-de-mormon.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -75,7 +75,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Historia Familiar</h3>
                         <p>Descubre tus raíces y conecta con tus antepasados. Te ayudamos gratuitamente con FamilySearch.</p>
-                        <a href="actividades/historia-familiar.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/historia-familiar.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -83,7 +83,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Clases de Inglés y Español</h3>
                         <p>Aprende inglés o español gratis con nuestros misioneros. Clases prácticas y divertidas para todos los niveles.</p>
-                        <a href="actividades/clases-ingles.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/clases-ingles.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -91,7 +91,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Apoyo y Bienestar</h3>
                         <p>Programas de apoyo emocional y recuperación. No estás solo — estamos aquí para acompañarte en momentos difíciles.</p>
-                        <a href="actividades/apoyo-bienestar.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/apoyo-bienestar.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -99,7 +99,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Noches de Hogar</h3>
                         <p>Actividades semanales para hacer amigos, jugar, aprender y disfrutar de una comunidad que te recibe con los brazos abiertos.</p>
-                        <a href="actividades/noches-de-hogar.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/noches-de-hogar.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -107,7 +107,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Servicio Comunitario</h3>
                         <p>Únete a nuestros proyectos de servicio comunitario. Juntos podemos hacer una diferencia real.</p>
-                        <a href="actividades/servicio-comunitario.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/servicio-comunitario.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -115,7 +115,7 @@ script: js/home.js
                     <div class="service-body">
                         <h3>Instituto</h3>
                         <p>Reuniones semanales para jóvenes: una lección sobre Jesucristo seguida de juegos y comida. Fe, amistad y diversión.</p>
-                        <a href="actividades/instituto.html" class="service-link">Saber más →</a>
+                        <a href="{{lroot}}actividades/instituto.html" class="service-link">Saber más →</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@ script: js/home.js
         </button>
         <div class="carousel-viewport">
             <div class="carousel-track cols-4" data-visible="4">
-                <a href="fe/proposito-vida.html" class="faith-card">
+                <a href="{{lroot}}fe/proposito-vida.html" class="faith-card">
                     <img src="{{root}}img/photos/nuevo-amanecer-800.webp" alt="Propósito de la vida" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -147,15 +147,15 @@ script: js/home.js
                         <p>¿Por qué estamos aquí? Descubre el plan que Dios tiene para ti.</p>
                     </div>
                 </a>
-                <a href="fe/jesucristo.html" class="faith-card">
-                    <img src="img/woman_taken_in_adultery.webp" alt="Jesucristo" class="faith-card-img" loading="lazy">
+                <a href="{{lroot}}fe/jesucristo.html" class="faith-card">
+                    <img src="{{root}}img/woman_taken_in_adultery.webp" alt="Jesucristo" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
                         <h3>Jesucristo</h3>
                         <p>Él es el centro de nuestra fe. Conoce Su vida y Sus enseñanzas.</p>
                     </div>
                 </a>
-                <a href="fe/bautismo.html" class="faith-card">
+                <a href="{{lroot}}fe/bautismo.html" class="faith-card">
                     <img src="{{root}}img/photos/el-bautismo-800.webp" alt="El Bautismo" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -163,7 +163,7 @@ script: js/home.js
                         <p>El primer paso en el camino del discipulado.</p>
                     </div>
                 </a>
-                <a href="fe/familia.html" class="faith-card">
+                <a href="{{lroot}}fe/familia.html" class="faith-card">
                     <img src="{{root}}img/photos/familia-mirando-fotos-800.webp" alt="La Familia" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -171,7 +171,7 @@ script: js/home.js
                         <p>La familia es central en el plan de Dios.</p>
                     </div>
                 </a>
-                <a href="fe/oracion.html" class="faith-card">
+                <a href="{{lroot}}fe/oracion.html" class="faith-card">
                     <img src="{{root}}img/photos/esperanza-y-sanacion-800.webp" alt="La Oración" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -179,7 +179,7 @@ script: js/home.js
                         <p>Habla con Dios. Él te escucha y quiere guiarte.</p>
                     </div>
                 </a>
-                <a href="fe/arrepentimiento.html" class="faith-card">
+                <a href="{{lroot}}fe/arrepentimiento.html" class="faith-card">
                     <img src="{{root}}img/photos/el-arrepentimiento-800.webp" alt="El Arrepentimiento" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -187,15 +187,15 @@ script: js/home.js
                         <p>Nunca es tarde para empezar de nuevo.</p>
                     </div>
                 </a>
-                <a href="fe/templos.html" class="faith-card">
-                    <img src="img/temple.webp" alt="Los Templos" class="faith-card-img" loading="lazy">
+                <a href="{{lroot}}fe/templos.html" class="faith-card">
+                    <img src="{{root}}img/temple.webp" alt="Los Templos" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
                         <h3>Los Templos</h3>
                         <p>Lugares sagrados donde las familias se unen para siempre.</p>
                     </div>
                 </a>
-                <a href="fe/restauracion.html" class="faith-card">
+                <a href="{{lroot}}fe/restauracion.html" class="faith-card">
                     <img src="{{root}}img/photos/la-restauracion-800.webp" alt="La Restauración" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -203,7 +203,7 @@ script: js/home.js
                         <p>El evangelio de Jesucristo restaurado en la tierra.</p>
                     </div>
                 </a>
-                <a href="fe/libro-de-mormon.html" class="faith-card">
+                <a href="{{lroot}}fe/libro-de-mormon.html" class="faith-card">
                     <img src="{{root}}img/photos/el-libro-de-mormon-800.webp" alt="El Libro de Mormón" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -211,7 +211,7 @@ script: js/home.js
                         <p>Otro testamento de Jesucristo. Una escritura antigua para el mundo de hoy.</p>
                     </div>
                 </a>
-                <a href="fe/origen-y-destino.html" class="faith-card">
+                <a href="{{lroot}}fe/origen-y-destino.html" class="faith-card">
                     <img src="{{root}}img/photos/preguntas-eternas-800.webp" alt="Preguntas Eternas" class="faith-card-img" loading="lazy">
                     <div class="faith-card-overlay"></div>
                     <div class="faith-card-body">
@@ -252,7 +252,7 @@ script: js/home.js
             <div class="form-row">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    <input type="text" id="nombre" name="nombre" autocomplete="given-name" placeholder="Tu nombre">
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido</label>
@@ -262,14 +262,14 @@ script: js/home.js
             <div class="form-row" id="contactRow">
                 <div class="form-group">
                     <label for="email">Correo electrónico <span class="label-hint">(o teléfono)</span></label>
-                    <input type="email" id="email" name="email" placeholder="tu@email.com">
+                    <input type="text" inputmode="email" autocomplete="email" id="email" name="email" placeholder="tu@email.com">
                 </div>
                 <div class="form-group">
                     <label for="telefono">Teléfono <span class="label-hint">(o correo)</span></label>
                     <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
                 </div>
             </div>
-            <small class="field-error field-error-contact" id="contactError">Por favor, indica tu correo electrónico o teléfono.</small>
+            <small class="field-error field-error-contact" id="contactError">Indica un correo electrónico o un teléfono válido.</small>
             <div class="form-group">
                 <label for="direccion">Dirección <span class="label-hint">(opcional)</span></label>
                 <div class="input-with-btn">
@@ -305,7 +305,7 @@ script: js/home.js
             </div>
             <div class="consent-group">
                 <input type="checkbox" id="consentimiento" name="consentimiento" required>
-                <label for="consentimiento">Acepto que la Misión me contacte y que se guarden mis datos según la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</label>
+                <label for="consentimiento">Acepto que la Misión me contacte y que se guarden mis datos según la <a href="{{lroot}}privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</label>
             </div>
             <button type="submit" class="btn-submit" id="submitBtn">Enviar mensaje</button>
             <div class="form-success" id="formSuccess">

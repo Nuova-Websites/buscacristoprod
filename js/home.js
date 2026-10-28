@@ -1,3 +1,7 @@
+// Translate a Spanish UI string into the page language (window.T is injected by the build for non-Spanish pages)
+const t = (s) => (window.T && window.T[s]) || s;
+const pageLang = document.documentElement.lang || 'es';
+
 // Video fallback — the poster covers loading; if the video errors, show the still image instead
 const vid = document.querySelector('.hero-video');
 const fallback = document.getElementById('heroFallback');
@@ -22,9 +26,9 @@ const direccionError = document.getElementById('direccionError');
 function validateDireccion(val) {
     val = val.trim();
     if (!val) return ''; // optional field
-    if (val.length < 5) return 'La dirección parece demasiado corta.';
-    if (!/[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]/.test(val)) return 'Ingresa una dirección con nombre de calle.';
-    if (!/\d/.test(val) && val.split(/\s+/).length < 3) return 'Incluye el número o localidad (ej: Calle Mayor 5, Madrid).';
+    if (val.length < 5) return t('La dirección parece demasiado corta.');
+    if (!/[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]/.test(val)) return t('Ingresa una dirección con nombre de calle.');
+    if (!/\d/.test(val) && val.split(/\s+/).length < 3) return t('Incluye el número o localidad (ej: Calle Mayor 5, Madrid).');
     return '';
 }
 
@@ -51,14 +55,14 @@ direccionInput.addEventListener('input', () => {
 
 // Geolocation button
 document.getElementById('geoBtn').addEventListener('click', () => {
-    if (!navigator.geolocation) { alert('Tu navegador no soporta geolocalización.'); return; }
+    if (!navigator.geolocation) { alert(t('Tu navegador no soporta geolocalización.')); return; }
     const btn = document.getElementById('geoBtn');
     btn.classList.add('loading'); btn.disabled = true;
     navigator.geolocation.getCurrentPosition(async (pos) => {
         try {
             const { latitude, longitude } = pos.coords;
-            const res = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&accept-language=es`, {
-                headers: { 'Accept-Language': 'es' }
+            const res = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&accept-language=${pageLang}`, {
+                headers: { 'Accept-Language': pageLang }
             });
             const data = await res.json();
             const a = data.address || {};
@@ -69,10 +73,10 @@ document.getElementById('geoBtn').addEventListener('click', () => {
             ].filter(Boolean);
             direccionInput.value = parts.join(', ');
             showDireccionState('');
-        } catch { alert('No se pudo obtener la dirección. Inténtalo manualmente.'); }
+        } catch { alert(t('No se pudo obtener la dirección. Inténtalo manualmente.')); }
         finally { btn.classList.remove('loading'); btn.disabled = false; }
     }, () => {
-        alert('No se pudo acceder a tu ubicación. Verifica los permisos del navegador.');
+        alert(t('No se pudo acceder a tu ubicación. Verifica los permisos del navegador.'));
         btn.classList.remove('loading'); btn.disabled = false;
     }, { timeout: 8000 });
 });
@@ -80,30 +84,38 @@ document.getElementById('geoBtn').addEventListener('click', () => {
 // Form submission
 const API_URL = 'https://script.google.com/macros/s/AKfycbwD1ysXRGNrelXhj9-x9vKqTwU6I0HqaN7OQa453uz0gnO3dlbc2PQwME-ysfiCfsSo/exec';
 
-// Email / phone cross-validation
+// Contact validation: at least ONE of email / phone must be valid; the other may be empty or invalid
 const emailInput = document.getElementById('email');
 const telefonoInput = document.getElementById('telefono');
 const contactError = document.getElementById('contactError');
 
+const isValidEmail = (v) => /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/.test(v.trim());
+const isValidPhone = (v) => {
+    v = v.trim();
+    const digits = v.replace(/\D/g, '').length;
+    return /^\+?[\d\s().-]+$/.test(v) && digits >= 9 && digits <= 15;
+};
+
 function validateContact() {
-    const hasEmail = emailInput.value.trim() !== '';
-    const hasPhone = telefonoInput.value.trim() !== '';
-    if (!hasEmail && !hasPhone) {
-        contactError.classList.add('show');
-        emailInput.classList.add('field-invalid');
-        telefonoInput.classList.add('field-invalid');
-        return false;
+    if (isValidEmail(emailInput.value) || isValidPhone(telefonoInput.value)) {
+        contactError.classList.remove('show');
+        emailInput.classList.remove('field-invalid');
+        telefonoInput.classList.remove('field-invalid');
+        return true;
     }
-    contactError.classList.remove('show');
-    emailInput.classList.remove('field-invalid');
-    telefonoInput.classList.remove('field-invalid');
-    return true;
+    contactError.classList.add('show');
+    emailInput.classList.add('field-invalid');
+    telefonoInput.classList.add('field-invalid');
+    return false;
 }
-[emailInput, telefonoInput].forEach(el => el.addEventListener('input', validateContact));
+// Only re-check live once the error is showing, so typing a valid value clears it without nagging early
+[emailInput, telefonoInput].forEach(el => el.addEventListener('input', () => {
+    if (contactError.classList.contains('show')) validateContact();
+}));
 
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    // Validate email/phone — at least one required
+    // Need a valid email or a valid phone number
     if (!validateContact()) { emailInput.focus(); return; }
     // Validate address if provided
     const dirErr = validateDireccion(direccionInput.value);
@@ -111,18 +123,20 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
 
     const btn = document.getElementById('submitBtn');
     btn.disabled = true;
-    btn.textContent = 'Enviando...';
+    const sendLabel = btn.textContent;
+    btn.textContent = t('Enviando...');
 
     const formData = {
         nombre: document.getElementById('nombre').value,
         apellido: document.getElementById('apellido').value,
-        email: document.getElementById('email').value,
-        telefono: document.getElementById('telefono').value,
+        // an invalid one is dropped so the sheet only holds contact details that work
+        email: isValidEmail(emailInput.value) ? emailInput.value.trim() : '',
+        telefono: isValidPhone(telefonoInput.value) ? telefonoInput.value.trim() : '',
         direccion: direccionInput.value,
         interes: document.getElementById('interes').value,
         mensaje: document.getElementById('mensaje').value,
         fecha: new Date().toISOString(),
-        idioma: document.getElementById('langSelect').value
+        idioma: pageLang
     };
 
     try {
@@ -139,17 +153,11 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
         document.getElementById('formSuccess').style.display = 'block';
         setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
     } catch (err) {
-        alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo.');
+        alert(t('Hubo un error al enviar el mensaje. Inténtalo de nuevo.'));
     } finally {
         btn.disabled = false;
-        btn.textContent = 'Enviar mensaje';
+        btn.textContent = sendLabel;
     }
-});
-
-// Language switcher (basic placeholder)
-document.getElementById('langSelect').addEventListener('change', (e) => {
-    const lang = e.target.value;
-    console.log('Language changed to:', lang);
 });
 
 // Infinite-loop carousel

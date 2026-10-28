@@ -15,3 +15,6 @@ desktop.ini
 
 # Video editing scratch files
 video-work/
+
+# Node
+node_modules/
