@@ -19,39 +19,8 @@ if (vid && fallback) {
 }
 
 
-// Address validation
+// Address: optional free text, no validation
 const direccionInput = document.getElementById('direccion');
-const direccionError = document.getElementById('direccionError');
-
-function validateDireccion(val) {
-    val = val.trim();
-    if (!val) return ''; // optional field
-    if (val.length < 5) return t('La dirección parece demasiado corta.');
-    if (!/[a-záéíóúüñA-ZÁÉÍÓÚÜÑ]/.test(val)) return t('Ingresa una dirección con nombre de calle.');
-    if (!/\d/.test(val) && val.split(/\s+/).length < 3) return t('Incluye el número o localidad (ej: Calle Mayor 5, Madrid).');
-    return '';
-}
-
-function showDireccionState(err) {
-    if (err) {
-        direccionError.textContent = err;
-        direccionError.classList.add('show');
-        direccionInput.classList.add('field-invalid');
-        direccionInput.classList.remove('field-valid');
-    } else if (direccionInput.value.trim()) {
-        direccionError.classList.remove('show');
-        direccionInput.classList.remove('field-invalid');
-        direccionInput.classList.add('field-valid');
-    } else {
-        direccionError.classList.remove('show');
-        direccionInput.classList.remove('field-invalid', 'field-valid');
-    }
-}
-
-direccionInput.addEventListener('blur', () => showDireccionState(validateDireccion(direccionInput.value)));
-direccionInput.addEventListener('input', () => {
-    if (direccionInput.classList.contains('field-invalid')) showDireccionState(validateDireccion(direccionInput.value));
-});
 
 // Geolocation button
 document.getElementById('geoBtn').addEventListener('click', () => {
@@ -72,7 +41,6 @@ document.getElementById('geoBtn').addEventListener('click', () => {
                 a.city || a.town || a.village || a.municipality || a.county
             ].filter(Boolean);
             direccionInput.value = parts.join(', ');
-            showDireccionState('');
         } catch { alert(t('No se pudo obtener la dirección. Inténtalo manualmente.')); }
         finally { btn.classList.remove('loading'); btn.disabled = false; }
     }, () => {
@@ -117,10 +85,6 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     // Need a valid email or a valid phone number
     if (!validateContact()) { emailInput.focus(); return; }
-    // Validate address if provided
-    const dirErr = validateDireccion(direccionInput.value);
-    if (dirErr) { showDireccionState(dirErr); direccionInput.focus(); return; }
-
     const btn = document.getElementById('submitBtn');
     btn.disabled = true;
     const sendLabel = btn.textContent;
@@ -149,7 +113,6 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
         const result = await res.json();
         if (!result.ok) throw new Error(result.error || 'Error');
         document.getElementById('contactForm').reset();
-        direccionInput.classList.remove('field-valid');
         document.getElementById('formSuccess').style.display = 'block';
         setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
     } catch (err) {

@@ -1,22 +1,4 @@
 {
- "La dirección parece demasiado corta.": {
-  "en": "The address looks too short.",
-  "fr": "L'adresse semble trop courte.",
-  "pt": "O endereço parece demasiado curto.",
-  "ca": "L'adreça sembla massa curta."
- },
- "Ingresa una dirección con nombre de calle.": {
-  "en": "Enter an address that includes a street name.",
-  "fr": "Saisissez une adresse comportant un nom de rue.",
-  "pt": "Introduza um endereço com o nome da rua.",
-  "ca": "Introdueix una adreça amb el nom del carrer."
- },
- "Incluye el número o localidad (ej: Calle Mayor 5, Madrid).": {
-  "en": "Include the number or town (e.g. 5 Main Street, Madrid).",
-  "fr": "Indiquez le numéro ou la ville (ex. : 5 rue Principale, Madrid).",
-  "pt": "Inclua o número ou a localidade (ex.: Rua Principal 5, Madrid).",
-  "ca": "Inclou el número o la localitat (p. ex.: Carrer Major 5, Madrid)."
- },
  "Tu navegador no soporta geolocalización.": {
   "en": "Your browser doesn't support geolocation.",
   "fr": "Votre navigateur ne prend pas en charge la géolocalisation.",

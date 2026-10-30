@@ -889,7 +889,6 @@ section { padding: 5rem 2rem; }
 
 .field-invalid { border-color: #e53e3e !important; box-shadow: 0 0 0 3px rgba(229,62,62,.12) !important; }
 
-.field-valid { border-color: #38a169 !important; }
 
 .form-success {
     display: none;
